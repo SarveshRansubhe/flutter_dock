@@ -1,5 +1,7 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_dock/new_dock.dart';
 
 /// Entrypoint of the application.
 void main() {
@@ -15,13 +17,28 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Dock(
-            items: [
-              Icons.person,
-              Icons.message,
-              Icons.call,
-              Icons.camera,
-              Icons.photo,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Dock(
+                items: [
+                  Icons.person,
+                  Icons.message,
+                  Icons.call,
+                  Icons.camera,
+                  Icons.photo,
+                ],
+              ),
+              SizedBox(height: 60),
+              DockNew(
+                items: [
+                  Icons.person,
+                  Icons.message,
+                  Icons.call,
+                  Icons.camera,
+                  Icons.photo,
+                ],
+              ),
             ],
           ),
         ),
